@@ -1,0 +1,6 @@
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
+
+g++ -Wall -o server server.cpp -L/usr/lib -lssl -lcrypto -std=c++11 -pthread
+
+g++ -Wall -o client client.cpp -L/usr/lib -lssl -lcrypto
+
